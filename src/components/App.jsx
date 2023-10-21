@@ -1,16 +1,44 @@
-export const App = () => {
+import React, { useState, useEffect, useCallback } from 'react';
+
+export function App() {
+  const [advice, setAdvice] = useState(null);
+  const [slipId, setSlipId] = useState(1);
+
+  const fetchAdvice = useCallback(async () => {
+    try {
+      const response = await fetch(
+        `https://api.adviceslip.com/advice/${slipId}`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data); // Виводимо вміст відповіді у консоль
+        setAdvice(data.slip);
+      } else {
+        console.error('Помилка при отриманні поради');
+      }
+    } catch (error) {
+      console.error('Помилка при взаємодії з API', error);
+    }
+  }, [slipId]);
+
+  useEffect(() => {
+    fetchAdvice();
+  }, [fetchAdvice]);
+
+  const handleNextAdviceClick = () => {
+    setSlipId(slipId + 1);
+  };
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div className="App">
+      <h1>Порада № {advice ? advice.id : '...'}</h1>
+
+      {advice && (
+        <div>
+          <p>{advice.advice}</p>
+        </div>
+      )}
+      <button onClick={handleNextAdviceClick}>Наступна порада</button>
     </div>
   );
-};
+}
