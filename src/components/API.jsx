@@ -1,5 +1,5 @@
 // api.jsx
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export function useAdviceAPI() {
   const [advice, setAdvice] = useState(null);
