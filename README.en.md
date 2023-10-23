@@ -37,15 +37,15 @@ random advice to take a break from their main content and relax for a moment.
 ## How to Install
 
 1. Clone the repository from
-   [GitHub](https://github.com/YourGitHubUsername/YourRepositoryName).
+   [GitHub](https://github.com/StanislavBobrivskyi/Advice-generator-app).
 2. Navigate to the project folder.
 3. Install the required dependencies using `npm install` or `yarn install`.
 4. Start the development server using `npm start` or `yarn start`.
 
 ## Author
 
-- [Your Name](https://github.com/YourGitHubUsername)
-- Email: your.email@example.com
+- [Stanislav Bobrivskyi](https://github.com/StanislavBobrivskyi/Advice-generator-app)
+- Email: bobrivskyistanislav@gmail.com
 
 ## License
 
