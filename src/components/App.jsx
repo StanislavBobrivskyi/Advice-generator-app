@@ -33,7 +33,7 @@ export function App() {
   }, [handleNextAdviceClick]);
 
   return (
-    <Wrapper className="App">
+    <>
       {loading ? (
         <Grid
           height="80"
@@ -46,7 +46,7 @@ export function App() {
           visible={true}
         />
       ) : (
-        <>
+        <Wrapper className="App">
           <Title>ADVICE # {advice ? advice.id : '...'}</Title>
 
           {advice && (
@@ -71,8 +71,8 @@ export function App() {
             <Line></Line>
           </Divider>
           <Button onClick={handleNextAdviceClick} />
-        </>
+        </Wrapper>
       )}
-    </Wrapper>
+    </>
   );
 }
