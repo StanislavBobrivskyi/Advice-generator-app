@@ -10,6 +10,7 @@ import {
   Divider,
   Line,
   Icon,
+  LoaderContainer,
 } from './Components.styled';
 export function App() {
   const { advice, handleNextAdviceClick } = useAdviceAPI();
@@ -35,16 +36,18 @@ export function App() {
   return (
     <>
       {loading ? (
-        <Grid
-          height="80"
-          width="80"
-          color="#4fa94d"
-          ariaLabel="grid-loading"
-          radius="12.5"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible={true}
-        />
+        <LoaderContainer>
+          <Grid
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="grid-loading"
+            radius="12.5"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        </LoaderContainer>
       ) : (
         <Wrapper className="App">
           <Title>ADVICE # {advice ? advice.id : '...'}</Title>

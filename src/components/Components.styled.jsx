@@ -117,3 +117,10 @@ export const ButtonAdvice = styled.button`
   & :active {
   transform: scale(1.01);
 `;
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
