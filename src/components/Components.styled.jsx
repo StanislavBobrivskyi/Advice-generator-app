@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -10,11 +10,16 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  width: 540px;
-  height: 332px;
+  max-width: 80%;
+  height: 462px;
   flex-shrink: 0;
   background: var(--Dark-Grayish-Blue, #313a48);
   box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1);
+  ${props =>
+    props.mobile &&
+    css`
+      max-width: 300px;
+    `}
 `;
 export const Title = styled.h1`
   color: var(--Neon-Green, #53ffaa);
@@ -30,7 +35,7 @@ export const Title = styled.h1`
 `;
 
 export const AdviceWrapper = styled.div`
-  width: 444px;
+  max-width: 80%;
 `;
 
 export const Advice = styled.p`
@@ -54,7 +59,7 @@ export const Divider = styled.div`
 `;
 
 export const Line = styled.div`
-  width: 196px;
+  width: 80%;
   height: 1px;
   flex-shrink: 0;
   background: var(--Grayish-Blue, #4f5d74);
@@ -70,10 +75,10 @@ export const SVG = styled.svg`
   border-radius: 50%;
 `;
 export const ButtonAdvice = styled.button`
-  position: fixed;
+  position: absolute;
   background-color: transparent;
   border: none;
-  transform: translate(0%, 250%);
+  transform: translate(0%, 355%);
   transition: box-shadow 0.3s, transform 0.3s;
   border-radius: 50%;
 
