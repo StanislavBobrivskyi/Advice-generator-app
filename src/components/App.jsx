@@ -25,7 +25,7 @@ export function App() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleNextAdviceClick();
-    }, 5000);
+    }, 7000);
 
     return () => {
       clearInterval(intervalId);
