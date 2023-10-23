@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAdviceAPI } from './API';
-import { Triangle } from 'react-loader-spinner';
+import { Grid } from 'react-loader-spinner';
 import { Button } from './Button';
 import {
   Wrapper,
@@ -35,13 +35,14 @@ export function App() {
   return (
     <Wrapper className="App">
       {loading ? (
-        <Triangle
+        <Grid
           height="80"
           width="80"
           color="#4fa94d"
-          ariaLabel="triangle-loading"
+          ariaLabel="grid-loading"
+          radius="12.5"
           wrapperStyle={{}}
-          wrapperClassName=""
+          wrapperClass=""
           visible={true}
         />
       ) : (
