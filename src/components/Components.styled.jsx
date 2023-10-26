@@ -100,7 +100,8 @@ export const StartBtn = styled.button`
     box-shadow: 0 0 10px #53ffaa; /* Додамо тінь при наведенні */
   }
   & :active {
-  transform: scale(1.01);
+    transform: scale(1.01);
+  }
 `;
 
 export const ButtonAdvice = styled.button`
@@ -115,7 +116,8 @@ export const ButtonAdvice = styled.button`
     box-shadow: 0 0 10px #53ffaa; /* Додамо тінь при наведенні */
   }
   & :active {
-  transform: scale(1.01);
+    transform: scale(1.01);
+  }
 `;
 
 export const LoaderContainer = styled.div`
