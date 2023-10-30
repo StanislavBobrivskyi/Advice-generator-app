@@ -96,10 +96,10 @@ export const StartBtn = styled.button`
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  & :hover {
+  &:hover {
     box-shadow: 0 0 10px #53ffaa; /* Додамо тінь при наведенні */
   }
-  & :active {
+  &:active {
     transform: scale(1.01);
   }
 `;
@@ -112,10 +112,10 @@ export const ButtonAdvice = styled.button`
   transition: box-shadow 0.3s, transform 0.3s;
   border-radius: 50%;
 
-  & :hover {
+  &:hover {
     box-shadow: 0 0 10px #53ffaa; /* Додамо тінь при наведенні */
   }
-  & :active {
+  &:active {
     transform: scale(1.01);
   }
 `;
