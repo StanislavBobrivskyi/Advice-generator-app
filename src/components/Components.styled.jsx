@@ -15,11 +15,6 @@ export const Wrapper = styled.div`
   flex-shrink: 0;
   background: var(--Dark-Grayish-Blue, #313a48);
   box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1);
-  ${props =>
-    props.mobile &&
-    css`
-      max-width: 300px;
-    `}
 `;
 export const StartWrapper = styled.div`
   position: absolute;
